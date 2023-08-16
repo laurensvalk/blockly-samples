@@ -76,6 +76,7 @@ suite('Procedures', function() {
         .callsFake((callback) => {
           callback();
         });
+    window.cancelAnimationFrame = this.sandbox.stub();
   });
 
   teardown(function() {
@@ -2024,6 +2025,7 @@ suite('Procedures', function() {
         },
         'extraState': {
           'procedureId': '1',
+          'fullSerialization': true,
         },
       },
       assertBlockStructure:
@@ -2047,6 +2049,7 @@ suite('Procedures', function() {
         },
         'extraState': {
           'procedureId': '1',
+          'fullSerialization': true,
         },
       },
       assertBlockStructure:
@@ -2082,6 +2085,7 @@ suite('Procedures', function() {
         },
         'extraState': {
           'procedureId': '1',
+          'fullSerialization': true,
           'params': [
             {
               'name': 'x',
@@ -2126,6 +2130,7 @@ suite('Procedures', function() {
         },
         'extraState': {
           'procedureId': '1',
+          'fullSerialization': true,
           'params': [
             {
               'name': 'preCreatedVar',
@@ -2160,6 +2165,7 @@ suite('Procedures', function() {
         },
         'extraState': {
           'procedureId': '1',
+          'fullSerialization': true,
           'hasStatements': false,
         },
       },
